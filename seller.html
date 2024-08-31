@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Seller Dashboard</title>
+    <link rel="stylesheet" href="seller.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="mainlogo.jpeg" alt="FarmFresh Logo">
+        </div>
+        <h1>Farmer Seller Dashboard</h1>
+        <p>Manage your products and orders efficiently.</p>
+
+        <!-- Navigation for Farmer -->
+        <nav>
+            <ul>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <!-- Product Listing Section -->
+        <div class="section">
+            <h2>List a New Product</h2>
+            <form id="productListingForm">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" name="productName" required>
+                
+                <label for="productCategory">Category:</label>
+                <input type="text" id="productCategory" name="productCategory" required>
+                
+                <label for="productQuantity">Quantity Available (in kg):</label>
+                <input type="number" id="productQuantity" name="productQuantity" required>
+                
+                <label for="pricePerKg">Price per kg:</label>
+                <input type="text" id="pricePerKg" name="pricePerKg" required>
+
+                <label for="productDescription">Product Description:</label>
+                <textarea id="productDescription" name="productDescription" required></textarea>
+                
+                <label for="productImage">Upload Product Image:</label>
+                <input type="file" id="productImage" name="productImage" required>
+
+                <button type="submit">List Product</button>
+            </form>
+        </div>
+
+        <!-- Product Management Section -->
+        <div class="section">
+            <h2>Your Listed Products</h2>
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Price per kg</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Product Row -->
+                    <tr>
+                        <td>Tomatoes</td>
+                        <td>Vegetable</td>
+                        <td>100</td>
+                        <td>₹20</td>
+                        <td>Fresh organic tomatoes</td>
+                        <td><img src="tomato.jpg" alt="Tomato Image" width="50"></td>
+                        <td><button>Remove</button></td>
+                    </tr>
+                    <!-- Additional products will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Order Management Section -->
+        <div class="section">
+            <h2>Your Orders</h2>
+            <table id="orderTable">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Buyer Name</th>
+                        <th>Product</th>
+                        <th>Quantity Ordered (kg)</th>
+                        <th>Total Price</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Order Row -->
+                    <tr>
+                        <td>1001</td>
+                        <td>John Doe</td>
+                        <td>Tomatoes</td>
+                        <td>20</td>
+                        <td>₹400</td>
+                        <td>Pending</td>
+                        <td><button>Mark as Shipped</button></td>
+                    </tr>
+                    <!-- Additional orders will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="seller.js"></script>
+</body>
+</html>
