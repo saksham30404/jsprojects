@@ -1,0 +1,74 @@
+/* CSS Variables for easy theme management */
+:root {
+    --primary-color: #143a25;
+    --secondary-color: #2e8b57;
+    --accent-color: #4682b4;
+    --text-color: #333;
+    --background-color: #020c08;
+    --font-family: 'Arial', sans-serif;
+    --gradient-background: linear-gradient(to bottom, #a7eb5a, #4caf50, #1d5128);
+}
+
+/* Universal Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: var(--gradient-background); /* Added gradient background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Logo */
+.logo img {
+    width: 150px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Header and Title */
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Centered Button */
+.centered-button {
+    margin-top: 20px;
+}
+
+.centered-button a {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.centered-button a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
